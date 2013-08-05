@@ -1,34 +1,30 @@
-development:
-    rails: 
-        server: 
-            unique_name: frontend
-            extra_packages: 
-                - atop
-                - chrony
 staging:
-    rails: 
-        server: 
+    rails:
+        server:
             unique_name: frontend
             type: BYOC
-            vendor: aws
-            size: m1.small
-            region: us-east-1
-            extra_packages: 
-                - chrony                
-    mysql: 
-        shared_server: frontend
-
-production:
-    rails: 
-        server: 
-            unique_name: frontend
-            type: BYOC
-            vendor: aws
-            size: c1.medium
-            region: us-east-1
-            extra_packages: 
+            extra_packages:
                 - chrony
-    mysql: 
+                - atop
+    mysql:
+        shared_server: frontend 
+development:    
+    rails:
+        server:
+            unique_name: frontend
+            type: BYOC
+            extra_packages:
+                - chrony
+                - atop
+    mysql:
         shared_server: frontend
-    redis: 
-        shared_server: frontend
+production:    
+    rails:
+        server:
+            unique_name: frontend
+            type: BYOC
+            extra_packages:
+                - chrony
+                - atop
+    mysql:
+        shared_server: frontend    
