@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '~>3.2'
-ruby '2.0.0' --> trying to specify this in the manifest file now
+ruby '2.0.0'
 
 gem 'mysql2'
 gem 'resque'
