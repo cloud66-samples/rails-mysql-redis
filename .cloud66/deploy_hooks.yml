@@ -1,5 +1,5 @@
 production:
-  before_rails:
+  first_thing:
     - source: /.cloud66/files/sample_script.sh
       destination: ~/sample_script.sh
       target: rails
@@ -7,7 +7,7 @@ production:
       run_on: all_servers
       apply_during: build_only
 development:
-  before_rails:
+  first_thing:
     - source: /.cloud66/files/sample_script.sh
       destination: ~/sample_script.sh
       target: rails
@@ -15,7 +15,7 @@ development:
       run_on: all_servers
       apply_during: build_only
 staging:
-  before_rails:
+  first_thing:
     - source: /.cloud66/files/sample_script.sh
       destination: ~/sample_script.sh
       target: rails
