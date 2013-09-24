@@ -3,28 +3,73 @@ staging:
         server:
             unique_name: frontend
             type: BYOC
+            vendor: digitalocean
+            region: 1
+            size: 62
             extra_packages:
                 - chrony
                 - atop
     mysql:
-        shared_server: frontend 
+        server:
+            unique_name: mysql
+            type: BYOC
+            vendor: digitalocean
+            region: 1
+            size: 63
+    redis:
+        server:
+            unique_name: redis
+            type: BYOC
+            vendor: digitalocean
+            region: 1
+            size: 66
 development:    
     rails:
         server:
             unique_name: frontend
             type: BYOC
+            vendor: digitalocean
+            region: 1
+            size: 62
             extra_packages:
                 - chrony
                 - atop
     mysql:
-        shared_server: frontend
+        server:
+            unique_name: mysql
+            type: BYOC
+            vendor: digitalocean
+            region: 1
+            size: 63
+    redis:
+        server:
+            unique_name: redis
+            type: BYOC
+            vendor: digitalocean
+            region: 1
+            size: 66
 production:    
     rails:
         server:
             unique_name: frontend
             type: BYOC
+            vendor: digitalocean
+            region: 1
+            size: 62
             extra_packages:
                 - chrony
                 - atop
     mysql:
-        shared_server: frontend    
+        server:
+            unique_name: mysql
+            type: BYOC
+            vendor: digitalocean
+            region: 1
+            size: 63
+    redis:
+        server:
+            unique_name: redis
+            type: BYOC
+            vendor: digitalocean
+            region: 1
+            size: 66
